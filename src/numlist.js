@@ -16,7 +16,7 @@
             <TouchableOpacity 
             style={styles.numlist} 
             key={idx}
-            onPress={()=>props.delete()}
+            onPress={()=>props.delete(idx)}
             >
                 <Text>{item}</Text>
             </TouchableOpacity>

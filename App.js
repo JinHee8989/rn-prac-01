@@ -7,54 +7,26 @@
  */
 
 import React,{Component} from 'react';
-import {View, Text,StyleSheet} from 'react-native';
+import {Button, View, Text,StyleSheet, ScrollView} from 'react-native';
 import Header from'./src/header';
 import Generator from './src/generate';
 import NumList from './src/numlist';
+import Input from './src/input';
 
 class App extends Component{
 
-  state = {
-    appName: 'My First App',
-    random: [36, 999]
+  onAddTextInput = () => {
+    alert('I want to add a TextInput');
   }
-  onAddRandomNum = () => {
-    const randomNum = Math.floor(Math.random()*100)+1;
-    this.setState(prevState => {
-      return {
-        random: [...prevState.random, randomNum]
-      }
-    })
-    this.setState({
-      random: newArray
-    })
-  }
-
-  onNumDelete = (position) => {
-    const newArray = this.state.random.filter((num,index)=>{
-      return position != index;
-    })
-  }
-
 
   render(){
 
     return (
 
       <View style={styles.mainView}>
-        <Header name={this.state.appName}/>
-
-          <View>
-            <Text onPress={(alert('Text Touch Event!'))}>
-             Hello world~
-            </Text>
-          </View>
-
-          <Generator add={this.onAddRandomNum}/>
-
-          <NumList num={this.state.random}/>
-
-
+        <Input/>
+        <Button title='add Text input'
+        onPress={this.onAddTextInput}/>
       </View>
     )
   }
