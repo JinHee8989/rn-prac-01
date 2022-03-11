@@ -33,6 +33,7 @@ class App extends Component{
 
 }
 
+
 const styles = StyleSheet.create({
   mainView: {
     backgroundColor: 'white',
