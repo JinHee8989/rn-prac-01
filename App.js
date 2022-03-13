@@ -7,12 +7,14 @@
  */
 
 import React,{Component} from 'react';
-import {TextInput, Button, View, Text,StyleSheet, ScrollView} from 'react-native';
+import {TextInput, Button, View, Text,StyleSheet, ScrollView,Image} from 'react-native';
 import Header from'./src/header';
 import Generator from './src/generate';
 import NumList from './src/numlist';
 import Input from './src/input';
 import Picker from './src/picker';
+import Steak from './assets/images/steak.jpg'
+import Modal from './src/modal';
 
 class App extends Component{
 
@@ -41,26 +43,7 @@ class App extends Component{
     return (
 
       <View style={styles.mainView}>
-          <Picker/>
-          {/* <TextInput
-                value={this.state.myTextInput}
-                style={styles.input}
-                onChangeText={this.onChangeInput}
-                multiline = {true} //개행 기능 
-                maxLength = {100} //입력값 길이 지정
-                autoCapitalize = {'none'} //대문자 자동수정기능 
-                editable={true} //입력 가능 여부 결정 
-           />
-        <Button title='add Text input'
-        onPress={this.onAddTextInput}/>
-        <ScrollView style={{width:'100%'}}>
-          { this.state.alphabet.map((item,index)=>(
-            <Text style={styles.mainText}
-            key={index}>
-                {item}
-            </Text>
-          ))
-  }</ScrollView> */}
+         <Modal/>
       </View>
     )
   }
@@ -99,7 +82,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 25,
     padding: 10
-}
+},
+  image:{
+    backgroundColor:'yellow',
+    width:'100%',
+    height:300
+  }
 
 
 
