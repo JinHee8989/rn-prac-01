@@ -7,9 +7,9 @@
  */
 
  import React,{Component} from 'react';
- import {View, Text,StyleSheet, TextInput} from 'react-native';
+ import {View, Text,StyleSheet, ActivityIndicator} from 'react-native';
  import {Picker} from '@react-native-community/picker';
- import {Slider} from '@react-native-community/slider';
+ import Slider from '@react-native-community/slider';
 
  class PickerComponent extends Component {
      state = {
@@ -37,6 +37,12 @@
                      step={10}
                 />
                 <Text style={styles.input}>{this.state.value}</Text>
+                <ActivityIndicator
+                    style={{paddingTop:200}}
+                    size='large'
+                    color='green'
+                    animating={true}
+                />
                 <Picker 
                 style={{height:50, width:250}}
                 selectedValue={this.state.country}
@@ -54,7 +60,7 @@
  
  const styles = StyleSheet.create({
 
-   container:{
+    container:{
        flex:1,
        paddingTop:20,
        marginBottom:200,
