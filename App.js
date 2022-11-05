@@ -16,6 +16,8 @@ import Picker from './src/picker';
 import Steak from './assets/images/steak.jpg'
 import Modal from './src/modal';
 
+
+
 class App extends Component{
 
   state = {
