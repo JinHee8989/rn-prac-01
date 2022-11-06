@@ -20,6 +20,8 @@ import Modal from './src/modal';
 
 class App extends Component{
 
+  
+
   state = {
     myTextInput: '',
     alphabet: ['a','b','c','d']
